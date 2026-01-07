@@ -1,77 +1,128 @@
-# 📈 Time Series Forecasting for Inventory Planning
+📈 Time Series Forecasting with Prophet (Sales Demand Prediction)
+📌 Project Overview
 
-## 📌 Project Overview
-The inventory management team needs to determine how many units of a key product to stock for the next quarter.  
-This project builds a **time-series forecasting model using Facebook Prophet** to support data-driven inventory decisions.
+This project focuses on time series forecasting to support inventory planning decisions.
+Using historical sales data, we build a Prophet forecasting model to predict future demand and help the inventory management team determine how many units of a key product to stock for the next quarter.
 
----
+The project emphasizes statistical rigor, clear visualizations, and business-focused insights rather than just modeling.
 
-## 🎯 Objectives
-- Identify trends and seasonality in historical sales
-- Forecast future demand
-- Evaluate model accuracy using RMSE and MAPE
-- Provide clear business recommendations
+🎯 Business Problem
 
----
+Inventory managers need accurate forecasts to:
 
-## 📊 Dataset
-- Superstore Sales Dataset (Kaggle)
-- Monthly aggregated sales
+Avoid stock-outs
 
----
+Reduce over-stocking costs
 
-## 🧠 Methodology
-1. Data cleaning and aggregation
-2. Exploratory time series analysis
-3. Train-test split (80/20)
-4. Forecasting using **Prophet**
-5. Model evaluation (RMSE, MAPE)
-6. Visualization and business interpretation
+Prepare for seasonal demand changes
 
----
+This project answers the question:
 
-## 🔮 Forecasting Model
-- Model: Facebook Prophet
-- Seasonality: Yearly
-- Forecast Horizon: Next quarter (3 months)
+“How many units should we stock next quarter based on historical sales patterns?”
 
----
+🧠 Objective
 
-## 📈 Results
-- **MAPE:** ~12%
-- **Trend:** Steady upward growth
-- **Seasonality:** Strong year-end sales peaks
+Analyze historical sales time-series data
 
----
+Identify trends and seasonality
 
-## ✅ Business Recommendation
-Sales are projected to **increase by approximately 15% next quarter**.  
-The inventory team should **increase stock levels by 15–20%** to meet demand and prevent stock-outs.
+Build a reliable forecasting model using Facebook Prophet
 
----
+Evaluate forecast accuracy
 
-## 📊 Dashboard
-A Power BI dashboard visualizes:
-- Actual vs Forecasted Sales
-- Expected Growth
-- Forecasted Demand
+Translate results into actionable business recommendations
 
----
+📊 Dataset
 
-## 🛠 Tools Used
-- Python
-- Pandas
-- Prophet
-- Matplotlib
-- Power BI
+Source: Kaggle – Superstore Time-Series Forecasting
+Granularity: Daily sales data
+Target Variable: Sales
 
----
+🛠 Tools & Technologies
 
-## 📌 How to Run
-```bash
-pip install -r requirements.txt
+Python
 
----bash (notebooks/sales_forecasting_prophet.ipynb)
+Prophet
 
+Pandas, NumPy
 
+Matplotlib
 
+Scikit-learn (for evaluation metrics)
+
+🔍 Project Workflow
+
+Data Preparation
+
+Load and clean time-series data
+
+Convert date columns to proper datetime format
+
+Aggregate sales by date
+
+Exploratory Analysis
+
+Visualize historical sales
+
+Decompose time series into:
+
+Trend
+
+Seasonality
+
+Residuals
+
+Train-Test Split
+
+Train set: Historical data
+
+Test set: Recent period for validation
+
+Forecasting Model
+
+Built a Prophet model
+
+Captured seasonality and trend automatically
+
+Forecasted sales for the next quarter
+
+Model Evaluation
+
+Root Mean Squared Error (RMSE)
+
+Mean Absolute Percentage Error (MAPE)
+
+Visualization
+
+Actual vs Forecasted sales
+
+Confidence intervals for predictions
+
+Business Insights
+
+Interpreted forecast results
+
+Provided stocking recommendations
+
+📈 Key Results
+
+The model successfully captured seasonal sales patterns
+
+Forecast indicates a projected increase in demand in the upcoming quarter
+
+Forecast accuracy metrics show acceptable error levels for inventory planning
+
+📌 Business Recommendation
+
+📦 Prepare for an estimated sales increase in the next quarter.
+Inventory levels should be adjusted upward to avoid stock-outs during peak demand periods.
+
+A conservative buffer stock is recommended due to forecast uncertainty.
+
+📁 Project Deliverables
+
+📓 Jupyter Notebook – Full analysis, model, and evaluation
+
+📄 PDF Report – Executive-friendly summary of findings
+
+📊 Dashboard Concept – Forecast visualization for decision-makers
